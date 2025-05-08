@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="EN" data-bs-theme="light">
+
+<head>
+
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Personal blog sharing my hobbies">
+        <meta name="keywords" content="Trayan, blog, web developer, project, hobbies, outdoors, programming, cooking">
+        <meta name="author" content="Trayan Stefanov">
+        <title>Trayo's blog</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <!-- Stylesheets -->
+        <link rel="stylesheet" href="./deli.css" type="text/css">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet"
+            integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+            integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+            crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/9.0.0/mdb.min.css" rel="stylesheet" />
+
+    </head>
+
+<body>
+    <button type="button" class="btn btn-danger btn-floating btn-lg position-fixed bottom-0 end-0 me-2 mb-2"
+        id="btn-back-to-top">
+        ^
+    </button>
+    <div class="row container fixed-top justify-content-between ps-5" id="intro-container">
+        <div class="col-5" id="welcomeSign">
+            <h1 class="display-4 align-self-center text-center position-relative">Майсторлъшки Мезета</h1>
+        </div>
+        <div class="col-6 position-relative z-1" data-bs-theme>
+            <nav class="navbar navbar-expand justify-self-end p-0" id="navbar-container">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse justify-content-center align-self-end" id="navbarNav">
+                    <ul class="navbar-nav d-flex-sm flex-row rounded-4 my-3 fs-2">
+                        <li class="nav-item ms-md-1 ms-lg-2 rounded-4">
+                            <a class="nav-link active px-1" data-nav-link>Начало</a>
+                        </li>
+                        <div class="vr d-block mx-md-1 mx-lg-2"></div>
+                        <li class="nav-item rounded-4">
+                            <a class="nav-link px-1" data-nav-link>Мезета</a>
+                        </li>
+                        <div class="vr d-block mx-md-1 mx-lg-2"></div>
+                        <li class="nav-item rounded-4">
+                            <a class="nav-link px-1" data-nav-link>За нас</a>
+                        </li>
+                        <div class="vr d-block mx-md-1 mx-lg-2"></div>
+                        <li class="nav-item me-md-1 me-lg-2 rounded-4">
+                            <a class="nav-link px-1" data-nav-link>Контакти</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    </div>
+
+    <main class="container" id="sitePage">
+
+        <!-- Landing page -->
+        <article class="landing active" data-page="landing">
+
+        </article>
+
+        <!-- Products -->
+        <article class="products" data-page="products">
+        </article>
+
+        <!-- About Us -->
+
+        <article class="about" data-page="about">
+        </article>
+
+        <!-- Contacts -->
+
+        <article class="contacts" data-page="contacts">
+            <h1 class="display-1 fst-italic">Връзка с нас</h1>
+            <div class="row justify-content-evenly">
+                <div class="col-lg-4 bg-body-secondary rounded-md-4 text-body-emphasis p-4 mb-3 m-md-3 text-center"
+                    style="align-content: space-evenly;">
+                    <h5 class="fw-bold"><i class="fa-solid fa-envelope pe-2"></i>Емейл</h5>
+                    <p>trayanstefanov95@gmail.com</p>
+                    <h5 class="fw-bold"><i class="fa-solid fa-location-dot pe-2"></i>Населено място</h5>
+                    <p>Sofia, Bulgaria</p>
+                    <h5 class="fw-bold"><i class="fa-brands fa-linkedin pe-2"></i>Linkedin</h5>
+                    <a class="text-decoration-none" style="color: var(--bs-heading-color)"
+                        href="https://linkedin.com/in/trayanstefanov">www.linkedin.com/in/trayanstefanov</a>
+                    <h5 class="fw-bold mt-3"><i class="fa-brands fa-square-github pe-2"></i>Github</h5>
+                    <a class="text-decoration-none" style="color: var(--bs-heading-color)"
+                        href="https://github.com/TrayanStefanov">https://github.com/TrayanStefanov</a>
+                </div>
+                <div class="col-lg-7 bg-body-secondary rounded-md-4 text-body-emphasis p-4 mb-3 m-md-3">
+                    <section class="map-container">
+                        <figure>
+                            <iframe class="w-100"
+                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5864.0170604474715!2d23.35199487046063!3d42.70354014740031!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40aa8580c3a58ed9%3A0x18f86999f5e49463!2sHadzhi%20Dimitar!5e0!3m2!1sen!2sbg!4v1745007606612!5m2!1sen!2sbg"
+                                width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                                referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        </figure>
+                    </section>
+                </div>
+            </div>
+            <div class="row bg-body-secondary rounded-md-4 text-body-emphasis p-4 mb-3 m-md-3">
+                <h2 class="mb-3">Пиши ни:</h2>
+                <form id="contactForm" role="form" class="form" data-form>
+                    <div class="row" id="smallFormFields">
+                        <div class="col">
+                            <input type="text" name="fullname" id="fullname" class="form-control rounded-md-4 mb-2"
+                                placeholder="Full name" required data-form-input>
+                        </div>
+                        <div class="col">
+                            <input type="email" name="email" id="email" class="form-control rounded-md-4 mb-2"
+                                placeholder="Email" required data-form-input>
+                        </div>
+                        <div class="col">
+                            <input type="text" name="topic" id="topic" class="form-control rounded-md-4 mb-2"
+                                placeholder="Topic" required data-form-input>
+                        </div>
+                    </div>
+                    <textarea rows="10" type="text" name="message" id="message" class="form-control rounded-md-4 mb-3"
+                        placeholder="Your message to me" required data-form-input></textarea>
+                    <button class="fomr-btn d-flex rounded-md-4 align-items-center py-1 px-3" type="submit"
+                        id="submitButton" disabled data-form-btn>
+                        <i class='far fa-paper-plane'></i>
+                        <span class="ms-2">Изпрати</span>
+                    </button>
+                </form>
+            </div>
+        </article>
+    </main>
+    <footer class="py-4 text-center  text-body-emphasis bg-body-secondary">
+        <p class="m-0">
+            Shop site built by <a href="https://github.com/TrayanStefanov">Trayan Stefanov</a>
+        </p>
+    </footer>
+    <!-- Scripts -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+    </script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq"
+        crossorigin="anonymous"></script>
+    <script type="module" src="./deli.js"></script>
+</body>
+
+</html>
