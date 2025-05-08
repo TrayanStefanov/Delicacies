@@ -1,0 +1,63 @@
+body{
+    background-color: beige !important;
+}
+
+ul{
+    font-family: cursive;
+    margin-top: 1.5rem !important;
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+#intro-container{
+    justify-self: center;
+}
+
+#welcomeSign{
+    min-height: 27rem;
+    background: url(./images/welcome-sign2v2.png) 50% 50%;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+#welcomeSign > h1{
+    font-size: 3.5rem;
+    font-family: cursive;
+    margin-top: 15rem;
+    transform: rotate(-6deg);
+}
+
+#navbar-container{
+    margin-top: -10rem;
+    min-height: 75%;
+    background: url(./images/navbarv2.png) 50% 50%;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.nav-link:hover{
+    cursor: pointer;
+}
+
+li:hover{
+    opacity: 80%;
+}
+
+#sitePage{
+    max-height: 100vh;
+    aspect-ratio: 1;
+    background: url(./images/background.jpg);
+    background-size: contain;
+    background-repeat: round;
+    overflow: hidden; 
+}
+
+article {
+    display: none;
+}
+
+article.active {
+    display: block;
+    animation: fade 0.5s ease backwards;
+}
+
