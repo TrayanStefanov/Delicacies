@@ -67,28 +67,30 @@
         <div id="content-container">
             <!-- Landing page -->
             <article class="landing active text-light text-center" data-page="landing">
-                <div class="row pb-5">
-                    <h1>Най-продавани</h1>
-                </div>
-                <div class="row justify-content-between m-3">
-                    <div class="col-6 p-3" id="meat1">
-                        <div class="row p-3 justify-content-between">
-                            <div class="col-6 board-image">
-                                <div class="rounded-4" id="meat1-image"></div>
-                            </div>
-                            <div class="col-6 d-flex flex-column justify-content-between">
-                                <div class="row fs-2 text-center">Филе Елена</div>
-                                <div class="row">
-                                    <p class="fs-6 mt-3">Класика направена по рецепта от Елена.</p>
+                <h1>Най-продавани</h1>
+                <div id="landing-container" class="rounded-4">
+                    <div class="row justify-content-between m-3">
+                        <div class="col-6 p-3" id="meat1">
+                            <div class="row p-3 justify-content-between">
+                                <div class="col-6 board-image">
+                                    <div class="rounded-4" id="meat1-image"></div>
                                 </div>
-                                <div class="row align-items-center">
-                                    <div class="col-7 p-0">Цена за 100грама: </div>
-                                    <div class="col-5">4.99лв</div>
-                                </div>
-                                <div class="row align-items-center">
+                                <div class="col-6 d-flex flex-column justify-content-between">
+                                    <div class="row fs-2 text-center">Филе Елена</div>
+                                    <div class="row">
+                                        <p class="fs-6 mt-3">Класика направена по рецепта от Елена.</p>
+                                    </div>
+                                    <div class="row align-items-center">
+                                        <div class="col-7 p-0">Цена за 100грама: </div>
+                                        <div class="col-5">4.99лв</div>
+                                    </div>
+                                    <div class="row align-items-center">
                                     <div class="col-5">
                                         <label for="amount">Количество</label>
-                                        <input class="weight-input" type="number" name="amount" pattern="/^-?\d+\.?\d*$/" onKeyPress="if(this.value.length==5) return false;" step=".01" placeholder="Грама">
+                                        <input class="weight-input" type="number" name="amount"
+                                        pattern="/^-?\d+\.?\d*$/"
+                                        onKeyPress="if(this.value.length==5) return false;" step=".01"
+                                        placeholder="Грама">
                                     </div>
                                     <div class="col-5">
                                         <button class="btn btn-success">Купи</button>
@@ -114,7 +116,10 @@
                                 <div class="row align-items-center">
                                     <div class="col-5">
                                         <label for="amount">Количество</label>
-                                        <input class="weight-input" type="number" name="amount" pattern="/^-?\d+\.?\d*$/" onKeyPress="if(this.value.length==5) return false;" step=".01" placeholder="Грама">
+                                        <input class="weight-input" type="number" name="amount"
+                                        pattern="/^-?\d+\.?\d*$/"
+                                        onKeyPress="if(this.value.length==5) return false;" step=".01"
+                                        placeholder="Грама">
                                     </div>
                                     <div class="col-5">
                                         <button class="btn btn-success">Купи</button>
@@ -123,13 +128,14 @@
                             </div>
                         </div>
                     </div>
+                    </div>
                 </div>
             </article>
-
+            
             <!-- Products -->
             <article class="products" data-page="products">
             </article>
-
+            
             <!-- About Us -->
 
             <article class="about" data-page="about">
