@@ -86,14 +86,27 @@ article.active {
     align-content: flex-end;
 }
 
-.landing {
+.landing{
+    font-family: cursive;
+}
+
+#landing-container {
     background-color: rgb(0, 0, 0, 0.5);
+}
+
+#meat1>.row {
+    background: url(./images/matt3.png) 50% 50%;
+}
+
+#meat2>.row {
+    background: url(./images/matt3.png) 50% 50%;
 }
 
 #meat1>.row,
 #meat2>.row {
-    background-color: green;
     border-radius: 15vh;
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 
 .board-image {
