@@ -61,3 +61,35 @@ article.active {
     animation: fade 0.5s ease backwards;
 }
 
+#content-container{
+    height: 50%;
+}
+
+.landing{
+    margin-top: 50vh;
+    height: 100%;
+    background: rgba(209, 230, 119, 0.4);
+}
+
+
+.board-image{
+    min-height: 25vh !important;
+    align-content: center;
+    background: url(./images/cutting_board.png) 50% 50%;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+#meat1-image{
+    background: url(./images/file1_c.png) 50% 50%;
+}
+
+#meat2-image{
+    background: url(./images/file2_c.png) 50% 50%;
+}
+
+#meat1-image, #meat2-image{
+    min-height: 20vh;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
