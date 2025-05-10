@@ -1,5 +1,4 @@
 body{
-    background-color: beige !important;
 }
 
 ul{
@@ -14,24 +13,25 @@ ul{
 }
 
 #welcomeSign{
-    min-height: 27rem;
+    min-height: 34vh;
     background: url(./images/welcome-sign2v2.png) 50% 50%;
-    background-size: cover;
+    background-size: contain;
     background-repeat: no-repeat;
 }
 
 #welcomeSign > h1{
-    font-size: 3.5rem;
+    position: relative;
+    font-size: 4.5vh;
     font-family: cursive;
-    margin-top: 15rem;
+    margin-top: 18vh;
     transform: rotate(-6deg);
 }
 
 #navbar-container{
-    margin-top: -10rem;
+    margin-top: -11vh;
     min-height: 75%;
     background: url(./images/navbarv2.png) 50% 50%;
-    background-size: cover;
+    background-size: contain;
     background-repeat: no-repeat;
 }
 
@@ -46,7 +46,7 @@ li:hover{
 #sitePage{
     max-height: 100vh;
     aspect-ratio: 1;
-    background: url(./images/background.jpg);
+    background: url(./images/background_2.jpg);
     background-size: contain;
     background-repeat: round;
     overflow: hidden; 
@@ -68,9 +68,12 @@ article.active {
 .landing{
     margin-top: 50vh;
     height: 100%;
-    background: rgba(209, 230, 119, 0.4);
 }
 
+#meat1 > .row, #meat2 > .row{
+    background-color: green;
+    border-radius: 15vh;
+}
 
 .board-image{
     min-height: 25vh !important;
@@ -92,4 +95,8 @@ article.active {
     min-height: 20vh;
     background-size: contain;
     background-repeat: no-repeat;
+}
+
+.weight-input{
+    width: 100px;
 }
