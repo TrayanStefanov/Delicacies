@@ -7,9 +7,7 @@ ul {
     font-size: 1.2rem;
 }
 
-#intro-container {
-    justify-self: center;
-}
+/* Animations */
 
 @keyframes sway {
     0% {
@@ -25,6 +23,12 @@ ul {
     }
 }
 
+/* Intro CSS */
+
+#intro-container {
+    justify-self: center;
+}
+
 #welcomeSign {
     min-height: 34vh;
     background: url(./images/welcome-sign2v2.png) 50% 50%;
@@ -36,9 +40,8 @@ ul {
     transform-origin: top;
 }
 
-#welcomeSign>h1 {
-    position: relative;
-    font-size: 3.5vw;
+#welcomeSign > h1 {
+    font-size: 2.5vw;
     font-family: cursive;
     margin-top: 18vh;
     transform: rotate(-6deg);
@@ -86,7 +89,9 @@ article.active {
     align-content: flex-end;
 }
 
-.landing{
+/* landing page CSS */
+
+.landing {
     font-family: cursive;
 }
 
@@ -135,3 +140,14 @@ article.active {
 .weight-input {
     width: 100px;
 }
+
+/* Products CSS */
+
+/* About CSS */
+
+#about-container{
+    color: white;
+    background-color: rgb(0, 0, 0, 0.5);
+}
+
+/* Contacts us CSS */
