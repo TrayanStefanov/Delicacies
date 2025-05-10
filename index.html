@@ -30,114 +30,156 @@
         id="btn-back-to-top">
         ^
     </button>
-    <div class="row container fixed-top justify-content-between ps-5" id="intro-container">
-        <div class="col-5" id="welcomeSign">
-            <h1 class="display-4 align-self-center text-center position-relative">Майсторлъшки Мезета</h1>
-        </div>
-        <div class="col-6 position-relative z-1" data-bs-theme>
-            <nav class="navbar navbar-expand justify-self-end p-0" id="navbar-container">
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse justify-content-center align-self-end" id="navbarNav">
-                    <ul class="navbar-nav d-flex-sm flex-row rounded-4 my-3 fs-2">
-                        <li class="nav-item ms-md-1 ms-lg-2 rounded-4">
-                            <a class="nav-link active px-1" data-nav-link>Начало</a>
-                        </li>
-                        <div class="vr d-block mx-md-1 mx-lg-2"></div>
-                        <li class="nav-item rounded-4">
-                            <a class="nav-link px-1" data-nav-link>Мезета</a>
-                        </li>
-                        <div class="vr d-block mx-md-1 mx-lg-2"></div>
-                        <li class="nav-item rounded-4">
-                            <a class="nav-link px-1" data-nav-link>За нас</a>
-                        </li>
-                        <div class="vr d-block mx-md-1 mx-lg-2"></div>
-                        <li class="nav-item me-md-1 me-lg-2 rounded-4">
-                            <a class="nav-link px-1" data-nav-link>Контакти</a>
-                        </li>
-                    </ul>
-                </div>
-            </nav>
-        </div>
-    </div>
 
     <main class="container" id="sitePage">
-
-        <!-- Landing page -->
-        <article class="landing active" data-page="landing">
-
-        </article>
-
-        <!-- Products -->
-        <article class="products" data-page="products">
-        </article>
-
-        <!-- About Us -->
-
-        <article class="about" data-page="about">
-        </article>
-
-        <!-- Contacts -->
-
-        <article class="contacts" data-page="contacts">
-            <h1 class="display-1 fst-italic">Връзка с нас</h1>
-            <div class="row justify-content-evenly">
-                <div class="col-lg-4 bg-body-secondary rounded-md-4 text-body-emphasis p-4 mb-3 m-md-3 text-center"
-                    style="align-content: space-evenly;">
-                    <h5 class="fw-bold"><i class="fa-solid fa-envelope pe-2"></i>Емейл</h5>
-                    <p>trayanstefanov95@gmail.com</p>
-                    <h5 class="fw-bold"><i class="fa-solid fa-location-dot pe-2"></i>Населено място</h5>
-                    <p>Sofia, Bulgaria</p>
-                    <h5 class="fw-bold"><i class="fa-brands fa-linkedin pe-2"></i>Linkedin</h5>
-                    <a class="text-decoration-none" style="color: var(--bs-heading-color)"
-                        href="https://linkedin.com/in/trayanstefanov">www.linkedin.com/in/trayanstefanov</a>
-                    <h5 class="fw-bold mt-3"><i class="fa-brands fa-square-github pe-2"></i>Github</h5>
-                    <a class="text-decoration-none" style="color: var(--bs-heading-color)"
-                        href="https://github.com/TrayanStefanov">https://github.com/TrayanStefanov</a>
-                </div>
-                <div class="col-lg-7 bg-body-secondary rounded-md-4 text-body-emphasis p-4 mb-3 m-md-3">
-                    <section class="map-container">
-                        <figure>
-                            <iframe class="w-100"
-                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5864.0170604474715!2d23.35199487046063!3d42.70354014740031!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40aa8580c3a58ed9%3A0x18f86999f5e49463!2sHadzhi%20Dimitar!5e0!3m2!1sen!2sbg!4v1745007606612!5m2!1sen!2sbg"
-                                width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
-                                referrerpolicy="no-referrer-when-downgrade"></iframe>
-                        </figure>
-                    </section>
-                </div>
+        <div class="row container fixed-top justify-content-between ps-5" id="intro-container">
+            <div class="col-5" id="welcomeSign">
+                <h1 class="display-4 align-self-center text-center position-relative">Майсторлъшки Мезета</h1>
             </div>
-            <div class="row bg-body-secondary rounded-md-4 text-body-emphasis p-4 mb-3 m-md-3">
-                <h2 class="mb-3">Пиши ни:</h2>
-                <form id="contactForm" role="form" class="form" data-form>
-                    <div class="row" id="smallFormFields">
-                        <div class="col">
-                            <input type="text" name="fullname" id="fullname" class="form-control rounded-md-4 mb-2"
-                                placeholder="Full name" required data-form-input>
+            <div class="col-6 position-relative z-1" data-bs-theme>
+                <nav class="navbar navbar-expand justify-self-end p-0" id="navbar-container">
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse justify-content-center align-self-end" id="navbarNav">
+                        <ul class="navbar-nav d-flex-sm flex-row rounded-4 my-3 fs-2">
+                            <li class="nav-item ms-md-1 ms-lg-2 rounded-4">
+                                <a class="nav-link active px-1" data-nav-link>Начало</a>
+                            </li>
+                            <div class="vr d-block mx-md-1 mx-lg-2"></div>
+                            <li class="nav-item rounded-4">
+                                <a class="nav-link px-1" data-nav-link>Мезета</a>
+                            </li>
+                            <div class="vr d-block mx-md-1 mx-lg-2"></div>
+                            <li class="nav-item rounded-4">
+                                <a class="nav-link px-1" data-nav-link>За нас</a>
+                            </li>
+                            <div class="vr d-block mx-md-1 mx-lg-2"></div>
+                            <li class="nav-item me-md-1 me-lg-2 rounded-4">
+                                <a class="nav-link px-1" data-nav-link>Контакти</a>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+        </div>
+
+        <div id="content-container">
+            <!-- Landing page -->
+            <article class="landing active text-light text-center" data-page="landing">
+                <div class="row pb-5">
+                    <h1>Най-продавани</h1>
+                </div>
+                <div class="row justify-content-between mx-5">
+                    <div class="col-6" id="meat1">
+                        <div class="board-image">
+                            <div class="rounded-4" id="meat1-image"></div>
                         </div>
-                        <div class="col">
-                            <input type="email" name="email" id="email" class="form-control rounded-md-4 mb-2"
-                                placeholder="Email" required data-form-input>
-                        </div>
-                        <div class="col">
-                            <input type="text" name="topic" id="topic" class="form-control rounded-md-4 mb-2"
-                                placeholder="Topic" required data-form-input>
+                        <!-- <p class="fs-4 mt-3">Класика направена по рецепта от Елена</p> -->
+                        <div class="row">
+                            <div class="col">
+                                <h1 class="fs-4 mt-3">49.99лв</h1>
+                            </div>
+                            <div class="col">
+                                <input type="text">
+                            </div>
+                            <div class="col">
+                                <button class="btn btn-success">Купи сега</button>
+                            </div>
                         </div>
                     </div>
-                    <textarea rows="10" type="text" name="message" id="message" class="form-control rounded-md-4 mb-3"
-                        placeholder="Your message to me" required data-form-input></textarea>
-                    <button class="fomr-btn d-flex rounded-md-4 align-items-center py-1 px-3" type="submit"
-                        id="submitButton" disabled data-form-btn>
-                        <i class='far fa-paper-plane'></i>
-                        <span class="ms-2">Изпрати</span>
-                    </button>
-                </form>
-            </div>
-        </article>
+                    <div class="col-6" id="meat2">
+                        <div class="board-image">
+                            <div class="rounded-4" id="meat2-image"></div>
+                        </div>
+                        <!-- <p class="fs-4 mt-3">Много вкусно пастърма с червен пипер и пушен червен пипер.</p> -->
+                        <div class="row">
+                            <div class="col">
+                                <h1 class="fs-4 mt-3">59.99лв</h1>
+                            </div>
+                            <div class="col">
+                                <input type="text">
+                            </div>
+                            <div class="col">
+                                <button class="btn btn-success">Купи сега</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Products -->
+            <article class="products" data-page="products">
+            </article>
+
+            <!-- About Us -->
+
+            <article class="about" data-page="about">
+            </article>
+
+            <!-- Contacts -->
+
+            <article class="contacts" data-page="contacts">
+                <h1 class="display-1 fst-italic">Връзка с нас</h1>
+                <div class="row justify-content-evenly">
+                    <div class="col-lg-4 bg-body-secondary rounded-md-4 text-body-emphasis p-4 mb-3 m-md-3 text-center"
+                        style="align-content: space-evenly;">
+                        <h5 class="fw-bold"><i class="fa-solid fa-envelope pe-2"></i>Емейл</h5>
+                        <p>trayanstefanov95@gmail.com</p>
+                        <h5 class="fw-bold"><i class="fa-solid fa-location-dot pe-2"></i>Населено място</h5>
+                        <p>Sofia, Bulgaria</p>
+                        <h5 class="fw-bold"><i class="fa-brands fa-linkedin pe-2"></i>Linkedin</h5>
+                        <a class="text-decoration-none" style="color: var(--bs-heading-color)"
+                            href="https://linkedin.com/in/trayanstefanov">www.linkedin.com/in/trayanstefanov</a>
+                        <h5 class="fw-bold mt-3"><i class="fa-brands fa-square-github pe-2"></i>Github</h5>
+                        <a class="text-decoration-none" style="color: var(--bs-heading-color)"
+                            href="https://github.com/TrayanStefanov">https://github.com/TrayanStefanov</a>
+                    </div>
+                    <div class="col-lg-7 bg-body-secondary rounded-md-4 text-body-emphasis p-4 mb-3 m-md-3">
+                        <section class="map-container">
+                            <figure>
+                                <iframe class="w-100"
+                                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5864.0170604474715!2d23.35199487046063!3d42.70354014740031!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40aa8580c3a58ed9%3A0x18f86999f5e49463!2sHadzhi%20Dimitar!5e0!3m2!1sen!2sbg!4v1745007606612!5m2!1sen!2sbg"
+                                    width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                                    referrerpolicy="no-referrer-when-downgrade"></iframe>
+                            </figure>
+                        </section>
+                    </div>
+                </div>
+                <div class="row bg-body-secondary rounded-md-4 text-body-emphasis p-4 mb-3 m-md-3">
+                    <h2 class="mb-3">Пиши ни:</h2>
+                    <form id="contactForm" role="form" class="form" data-form>
+                        <div class="row" id="smallFormFields">
+                            <div class="col">
+                                <input type="text" name="fullname" id="fullname" class="form-control rounded-md-4 mb-2"
+                                    placeholder="Full name" required data-form-input>
+                            </div>
+                            <div class="col">
+                                <input type="email" name="email" id="email" class="form-control rounded-md-4 mb-2"
+                                    placeholder="Email" required data-form-input>
+                            </div>
+                            <div class="col">
+                                <input type="text" name="topic" id="topic" class="form-control rounded-md-4 mb-2"
+                                    placeholder="Topic" required data-form-input>
+                            </div>
+                        </div>
+                        <textarea rows="10" type="text" name="message" id="message"
+                            class="form-control rounded-md-4 mb-3" placeholder="Your message to me" required
+                            data-form-input></textarea>
+                        <button class="fomr-btn d-flex rounded-md-4 align-items-center py-1 px-3" type="submit"
+                            id="submitButton" disabled data-form-btn>
+                            <i class='far fa-paper-plane'></i>
+                            <span class="ms-2">Изпрати</span>
+                        </button>
+                    </form>
+                </div>
+            </article>
+
+        </div>
     </main>
     <footer class="py-4 text-center text-body-emphasis bg-body-secondary">
         <p class="m-0">
-            Shop site built by <a href="https://github.com/TrayanStefanov">Trayan Stefanov</a>
+            E-commerce site built by <a href="https://github.com/TrayanStefanov">Trayan Stefanov</a>
         </p>
     </footer>
     <!-- Scripts -->
