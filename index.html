@@ -42,7 +42,7 @@
                         <span class="navbar-toggler-icon"></span>
                     </button>
                     <div class="collapse navbar-collapse justify-content-center align-self-end" id="navbarNav">
-                        <ul class="navbar-nav d-flex-sm flex-row rounded-4 my-3 fs-2">
+                        <ul class="navbar-nav d-flex-sm flex-row rounded-4 my-3 fs-3">
                             <li class="nav-item ms-md-1 ms-lg-2 rounded-4">
                                 <a class="nav-link active px-1" data-nav-link>Начало</a>
                             </li>
@@ -71,37 +71,55 @@
                     <h1>Най-продавани</h1>
                 </div>
                 <div class="row justify-content-between mx-5">
-                    <div class="col-6" id="meat1">
-                        <div class="board-image">
-                            <div class="rounded-4" id="meat1-image"></div>
-                        </div>
-                        <!-- <p class="fs-4 mt-3">Класика направена по рецепта от Елена</p> -->
-                        <div class="row">
-                            <div class="col">
-                                <h1 class="fs-4 mt-3">49.99лв</h1>
+                    <div class="col-6 p-3" id="meat1">
+                        <div class="row p-3 justify-content-between">
+                            <div class="col-6 board-image">
+                                <div class="rounded-4" id="meat1-image"></div>
                             </div>
-                            <div class="col">
-                                <input type="text">
-                            </div>
-                            <div class="col">
-                                <button class="btn btn-success">Купи сега</button>
+                            <div class="col-6 d-flex flex-column justify-content-between">
+                                <div class="row fs-2 text-center">Филе Елена</div>
+                                <div class="row">
+                                    <p class="fs-6 mt-3">Класика направена по рецепта от Елена.</p>
+                                </div>
+                                <div class="row align-items-center">
+                                    <div class="col-7 p-0">Цена за 100грама: </div>
+                                    <div class="col-5">49.99лв</div>
+                                </div>
+                                <div class="row align-items-center">
+                                    <div class="col-5">
+                                        <label for="amount">Количество</label>
+                                        <input class="weight-input" type="number" name="amount" pattern="/^-?\d+\.?\d*$/" onKeyPress="if(this.value.length==6) return false;" step=".01" placeholder="Кг">
+                                    </div>
+                                    <div class="col-5">
+                                        <button class="btn btn-success">Купи</button>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
-                    <div class="col-6" id="meat2">
-                        <div class="board-image">
-                            <div class="rounded-4" id="meat2-image"></div>
-                        </div>
-                        <!-- <p class="fs-4 mt-3">Много вкусно пастърма с червен пипер и пушен червен пипер.</p> -->
-                        <div class="row">
-                            <div class="col">
-                                <h1 class="fs-4 mt-3">59.99лв</h1>
+                    <div class="col-6 p-3" id="meat2">
+                        <div class="row p-3 justify-content-between">
+                            <div class="col-6 board-image">
+                                <div class="rounded-4" id="meat2-image"></div>
                             </div>
-                            <div class="col">
-                                <input type="text">
-                            </div>
-                            <div class="col">
-                                <button class="btn btn-success">Купи сега</button>
+                            <div class="col-6 d-flex flex-column justify-content-between">
+                                <div class="row fs-2 text-center">Пастърма</div>
+                                <div class="row">
+                                    <p class="fs-6 mt-3">Много вкусно пастърма с червен пипер и пушен червен пипер.</p>
+                                </div>
+                                <div class="row align-items-center">
+                                    <div class="col-7 p-0">Цена за 100грама: </div>
+                                    <div class="col-5">59.99лв</div>
+                                </div>
+                                <div class="row align-items-center">
+                                    <div class="col-5">
+                                        <label for="amount">Количество</label>
+                                        <input class="weight-input" type="number" name="amount" pattern="/^-?\d+\.?\d*$/" onKeyPress="if(this.value.length==6) return false;" step=".01" placeholder="Кг">
+                                    </div>
+                                    <div class="col-5">
+                                        <button class="btn btn-success">Купи</button>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
