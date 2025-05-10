@@ -1,55 +1,75 @@
-body{
-}
+body {}
 
-ul{
+ul {
     font-family: cursive;
     margin-top: 1.5rem !important;
     font-weight: bold;
     font-size: 1.2rem;
 }
 
-#intro-container{
+#intro-container {
     justify-self: center;
 }
 
-#welcomeSign{
+@keyframes sway {
+    0% {
+        transform: rotate(8deg);
+    }
+
+    50% {
+        transform: rotate(-8deg);
+    }
+
+    100% {
+        transform: rotate(8deg);
+    }
+}
+
+#welcomeSign {
     min-height: 34vh;
     background: url(./images/welcome-sign2v2.png) 50% 50%;
     background-size: contain;
     background-repeat: no-repeat;
+    margin-top: -2vh;
+    animation: sway 5s infinite;
+    animation-timing-function: ease-in-out;
+    transform-origin: top;
 }
 
-#welcomeSign > h1{
+#welcomeSign>h1 {
     position: relative;
-    font-size: 4.5vh;
+    font-size: 3.5vw;
     font-family: cursive;
     margin-top: 18vh;
     transform: rotate(-6deg);
 }
 
-#navbar-container{
-    margin-top: -11vh;
-    min-height: 75%;
+#navbar-container {
+    min-height: 80%;
     background: url(./images/navbarv2.png) 50% 50%;
     background-size: contain;
     background-repeat: no-repeat;
+    margin-top: -11vh;
+    animation: sway 10s infinite;
+    animation-timing-function: ease-in-out;
+    transform-origin: top;
 }
 
-.nav-link:hover{
+.nav-link:hover {
     cursor: pointer;
 }
 
-li:hover{
+li:hover {
     opacity: 80%;
 }
 
-#sitePage{
-    max-height: 100vh;
+#sitePage {
+    max-height: 95vh;
     aspect-ratio: 1;
     background: url(./images/background_2.jpg);
     background-size: contain;
     background-repeat: round;
-    overflow: hidden; 
+    overflow: hidden;
 }
 
 article {
@@ -61,21 +81,22 @@ article.active {
     animation: fade 0.5s ease backwards;
 }
 
-#content-container{
-    height: 50%;
-}
-
-.landing{
-    margin-top: 50vh;
+#content-container {
     height: 100%;
+    align-content: flex-end;
 }
 
-#meat1 > .row, #meat2 > .row{
+.landing {
+    background-color: rgb(0, 0, 0, 0.5);
+}
+
+#meat1>.row,
+#meat2>.row {
     background-color: green;
     border-radius: 15vh;
 }
 
-.board-image{
+.board-image {
     min-height: 25vh !important;
     align-content: center;
     background: url(./images/cutting_board.png) 50% 50%;
@@ -83,20 +104,21 @@ article.active {
     background-repeat: no-repeat;
 }
 
-#meat1-image{
+#meat1-image {
     background: url(./images/file1_c.png) 50% 50%;
 }
 
-#meat2-image{
+#meat2-image {
     background: url(./images/file2_c.png) 50% 50%;
 }
 
-#meat1-image, #meat2-image{
+#meat1-image,
+#meat2-image {
     min-height: 20vh;
     background-size: contain;
     background-repeat: no-repeat;
 }
 
-.weight-input{
+.weight-input {
     width: 100px;
 }
