@@ -7,6 +7,22 @@ ul {
 
 /* Animations */
 
+@keyframes slide-in-tilt {
+    from{
+        left: -100%;
+    }
+    0%{
+        transform: translateX(-100%);
+    }
+    100%{
+        transform: rotate(35deg);
+        transform-origin: bottom-left;
+    }
+    
+}
+
+/* needs smotthingout */
+
 @keyframes lower{
     0%{
         transform: translateY(-75%);
@@ -52,6 +68,7 @@ ul {
 
 
 @keyframes sway {
+    
     0% {
         transform: rotate(8deg);
     }
@@ -200,3 +217,27 @@ article.active {
 }
 
 /* Contacts us CSS */
+
+.contacts{
+    min-width: 30%;
+    float: left;
+}
+
+#contacts-container{
+    position: relative;
+    left: -20%;
+    min-height: 50vh;
+    background: url(./images/contacts_sign_2.png) 50% 50%;
+    background-size: contain;
+    background-repeat: no-repeat;
+    animation: slide-in-tilt 3s;
+    animation-fill-mode: forwards;
+}
+
+#contacts-email{
+    transform: rotate(4.5deg);
+}
+
+#contacts-location{
+    transform: rotate(8deg);
+}
