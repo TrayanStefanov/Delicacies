@@ -1,5 +1,3 @@
-body {}
-
 ul {
     font-family: cursive;
     margin-top: 1.5rem !important;
@@ -8,6 +6,50 @@ ul {
 }
 
 /* Animations */
+
+@keyframes lower{
+    0%{
+        transform: translateY(-75%);
+    }
+    /* 50%{
+        transform: translatey(-30%);
+
+    }
+    100%{
+        transform: translateY(-15%);
+    } */
+    /*25%{
+        transform: translateY(20%);
+    }
+    35%{
+        transform: translateY(-15%);
+    }
+    40%{
+        transform: translateY(10%);
+    }
+    45%{
+        transform: translateY(-10%);
+    }
+    50%{
+        transform: translateY(10%);
+    } */
+    /* 60%{
+        transform: rotate(10deg);
+    }
+    70%{
+        transform: rotate(-10deg);
+    }
+    80%{
+        transform: rotate(10deg);
+    }
+    90%{
+        transform: rotate(-10deg);
+    }
+    100%{
+        transform: rotate(10deg);
+    } */
+}
+
 
 @keyframes sway {
     0% {
@@ -146,8 +188,15 @@ article.active {
 /* About CSS */
 
 #about-container{
-    color: white;
-    background-color: rgb(0, 0, 0, 0.5);
+    min-height: 80vh;
+    background: url(./images/about-sign-chain-3.png) 50% 50%;
+    background-size: contain;
+    background-repeat: no-repeat;
+    animation: lower 5s;
+}
+
+#about-text{
+    max-width: 40vw;
 }
 
 /* Contacts us CSS */
