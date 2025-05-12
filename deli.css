@@ -7,6 +7,16 @@ ul {
 
 /* Animations */
 
+/* @keyframes spin-and-enlarge {
+    0% {
+        transform: rotateZ(360deg) scale(1) translate(0%, 0%);
+    }
+
+    100% {
+        transform: rotateZ(0deg) scale(2.5) translate(-40%, -30%);
+    }
+} */
+
 @keyframes slide-in-tilt {
     from {
         left: -10%;
@@ -26,7 +36,7 @@ ul {
 @keyframes slide-in-from-right {
     0% {
         transform: translateX(100%);
-        
+
     }
 
     100% {
@@ -39,7 +49,10 @@ ul {
 
 @keyframes lower {
     0% {
-        transform: translateY(-75%);
+        transform: translateY(-100%);
+    }
+    100%{
+        transform: translateY(-20%);
     }
 
     /* 50%{
@@ -194,6 +207,8 @@ article.active {
     background: url(./images/cutting_board.png) 50% 50%;
     background-size: contain;
     background-repeat: no-repeat;
+    /* animation: spin-and-enlarge 10s;
+    animation-fill-mode: forwards; */
 }
 
 #meat1-image {
@@ -225,6 +240,7 @@ article.active {
     background-size: contain;
     background-repeat: no-repeat;
     animation: lower 5s;
+    animation-fill-mode: forwards;
 }
 
 #about-text {
@@ -262,7 +278,6 @@ article.active {
     background-repeat: no-repeat;
     animation: slide-in-from-right 2s;
     animation-fill-mode: forwards;
-
 }
 
 .form-control {
