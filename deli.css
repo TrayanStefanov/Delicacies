@@ -8,25 +8,40 @@ ul {
 /* Animations */
 
 @keyframes slide-in-tilt {
-    from{
+    from {
         left: -10%;
     }
-    0%{
+
+    0% {
         transform: translateX(-100%);
     }
-    100%{
+
+    100% {
         transform: rotate(35deg);
         transform-origin: bottom-left;
     }
-    
+
 }
 
-/* needs smotthingout */
+@keyframes slide-in-from-right {
+    0% {
+        transform: translateX(100%);
+        
+    }
 
-@keyframes lower{
-    0%{
+    100% {
+        transform: translateX(2%);
+        opacity: 1;
+    }
+}
+
+/* needs smoothingout */
+
+@keyframes lower {
+    0% {
         transform: translateY(-75%);
     }
+
     /* 50%{
         transform: translatey(-30%);
 
@@ -68,7 +83,7 @@ ul {
 
 
 @keyframes sway {
-    
+
     0% {
         transform: rotate(8deg);
     }
@@ -99,7 +114,7 @@ ul {
     transform-origin: top;
 }
 
-#welcomeSign > h1 {
+#welcomeSign>h1 {
     font-size: 2.5vw;
     font-family: cursive;
     margin-top: 18vh;
@@ -204,7 +219,7 @@ article.active {
 
 /* About CSS */
 
-#about-container{
+#about-container {
     min-height: 80vh;
     background: url(./images/about-sign-chain-3.png) 50% 50%;
     background-size: contain;
@@ -212,16 +227,13 @@ article.active {
     animation: lower 5s;
 }
 
-#about-text{
+#about-text {
     max-width: 40vw;
 }
 
 /* Contacts us CSS */
 
-.contacts{
-}
-
-#contacts-sign-container{
+#contacts-sign-container {
     position: relative;
     min-height: 50vh;
     min-width: 30%;
@@ -234,22 +246,25 @@ article.active {
     animation-fill-mode: forwards;
 }
 
-#contacts-email{
+#contacts-email {
     transform: rotate(4.5deg);
 }
 
-#contacts-location{
+#contacts-location {
     transform: rotate(8deg);
 }
 
-#contacts-message-container{
+#contacts-message-container {
     max-width: 60%;
     place-self: flex-end;
     background: url(./images/contacts_message_sign.png) 50% 50%;
     background-size: contain;
     background-repeat: no-repeat;
+    animation: slide-in-from-right 2s;
+    animation-fill-mode: forwards;
+
 }
 
-.form-control{
+.form-control {
     background-color: #f8f3b5 !important;
 }
