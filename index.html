@@ -24,21 +24,18 @@
 </head>
 
 <body>
-    <button type="button" class="btn btn-danger btn-floating btn-lg position-fixed bottom-0 end-0 me-2 mb-2"
-        id="btn-back-to-top">
-        ^
-    </button>
+    <button type="button" id="btn-back-to-top" class="btn btn-danger btn-floating btn-lg position-fixed bottom-0 end-0 me-2 mb-2">^</button>
     <main class="container" id="sitePage">
-        <div class="row container fixed-top justify-content-between ps-5" id="intro-container">
+        <div id="intro-container" class="row container fixed-top justify-content-between ps-5">
             <div class="col-5" id="welcomeSign">
                 <h1 class="display-4 align-self-center text-center position-relative">Майсторлъшки Мезета</h1>
             </div>
             <div class="col-7">
-                <nav class="navbar navbar-expand justify-self-end p-0" id="navbar-container">
+                <nav id="navbar-container" class="navbar navbar-expand justify-self-end p-0">
                     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                         <span class="navbar-toggler-icon"></span>
                     </button>
-                    <div class="collapse navbar-collapse justify-content-center align-self-end" id="navbarNav">
+                    <div id="navbarNav" class="collapse navbar-collapse justify-content-center align-self-end">
                         <ul class="navbar-nav d-flex-sm flex-row rounded-4 my-3 fs-3">
                             <li class="nav-item ms-md-1 ms-lg-2 rounded-4">
                                 <a class="nav-link active px-1" data-nav-link>
@@ -121,10 +118,10 @@
                 <h1>Най-продавани</h1>
                 <div id="landing-container" class="rounded-4">
                     <div class="row justify-content-between m-3">
-                        <div class="col-6 p-3" id="meat1">
+                        <div id="meat1" class="col-6 p-3">
                             <div class="row p-3 justify-content-between">
                                 <div class="col-6 board-image">
-                                    <div class="rounded-4" id="meat1-image"></div>
+                                    <div id="meat1-image" class="rounded-4"></div>
                                 </div>
                                 <div class="col-6 d-flex flex-column justify-content-between">
                                     <div class="row fs-2 text-center">Филе Елена</div>
@@ -150,10 +147,10 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-6 p-3" id="meat2">
+                        <div id="meat2" class="col-6 p-3">
                             <div class="row p-3 justify-content-between">
                                 <div class="col-6 board-image">
-                                    <div class="rounded-4" id="meat2-image"></div>
+                                    <div id="meat2-image" class="rounded-4"></div>
                                 </div>
                                 <div class="col-6 d-flex flex-column justify-content-between">
                                     <div class="row fs-2 text-center">Пастърма</div>
@@ -192,8 +189,8 @@
 
             <!-- Contacts -->
 
-            <article class="contacts" data-page="contacts">
-                <div id="contacts-container" class="align-self-end text-center text-primary-dark p-2">
+            <article class="contacts active" data-page="contacts">
+                <div id="contacts-sign-container" class="align-self-end text-center text-primary-dark p-2">
                     <h3 class="fst-italic mb-4">Връзка с нас</h3>
                     <div id="contacts-email" class="mb-4">
                         <h5 class="fw-bold mb-0"><i class="fa-solid fa-envelope pe-2"></i>Емейл</h5>
@@ -208,10 +205,11 @@
                         <p class="mb-0">0886-123-456</p>
                     </div>
                 </div>
-                <!-- <div class="row bg-body-secondary rounded-md-4 text-body-emphasis p-4 mb-3 m-md-3">
+                <div id="contacts-message-container"></div>
+                <div class="row bg-body-dark rounded-md-4 text-body-emphasis p-4 mb-3 m-md-3">
                     <h2 class="mb-3">Пиши ни:</h2>
                     <form id="contactForm" role="form" class="form" data-form>
-                        <div class="row" id="smallFormFields">
+                        <div id="smallFormFields" class="row">
                             <div class="col">
                                 <input type="text" name="fullname" id="fullname" class="form-control rounded-md-4 mb-2"
                                     placeholder="Full name" required data-form-input>
@@ -234,7 +232,7 @@
                             <span class="ms-2">Изпрати</span>
                         </button>
                     </form>
-                </div> -->
+                </div>
             </article>
 
         </div>
