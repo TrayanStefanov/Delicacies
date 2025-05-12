@@ -17,6 +17,24 @@ ul {
     }
 } */
 
+@keyframes fade-in {
+    0% {
+        transform: rotateX(-100deg);
+        transform-origin: top;
+        opacity: 0;
+    }
+
+    50%{
+        opacity: 1;
+    }
+
+    100% {
+        transform: rotateX(0deg);
+        transform-origin: top;
+        
+    }
+}
+
 @keyframes slide-in-tilt {
     from {
         left: -10%;
@@ -51,7 +69,8 @@ ul {
     0% {
         transform: translateY(-100%);
     }
-    100%{
+
+    100% {
         transform: translateY(-20%);
     }
 
@@ -228,6 +247,31 @@ article.active {
 
 .weight-input {
     width: 100px;
+}
+
+/* Full product info CSS */
+
+#full-product-container {
+    max-width: 76%;
+    min-height: 60vh;
+    background: url(./images/delicacy-full.png) 50% 50%;
+    background-size: contain;
+    background-repeat: no-repeat;
+    animation: fade-in 4s;
+}
+
+#file-info-head,
+#file-info-middle,
+#file-info-bottom {
+    background-color: rgb(245, 245, 220, 0.5);
+}
+
+#file-info-bottom {
+    justify-self: flex-end;
+}
+
+#file-info-bottom>div {
+    vertical-align: middle;
 }
 
 /* Products CSS */
