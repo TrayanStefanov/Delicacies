@@ -9,7 +9,7 @@ ul {
 
 @keyframes slide-in-tilt {
     from{
-        left: -100%;
+        left: -10%;
     }
     0%{
         transform: translateX(-100%);
@@ -219,14 +219,14 @@ article.active {
 /* Contacts us CSS */
 
 .contacts{
-    min-width: 30%;
-    float: left;
 }
 
-#contacts-container{
+#contacts-sign-container{
     position: relative;
-    left: -20%;
     min-height: 50vh;
+    min-width: 30%;
+    float: left;
+    left: -7%;
     background: url(./images/contacts_sign_2.png) 50% 50%;
     background-size: contain;
     background-repeat: no-repeat;
@@ -240,4 +240,16 @@ article.active {
 
 #contacts-location{
     transform: rotate(8deg);
+}
+
+#contacts-message-container{
+    max-width: 60%;
+    place-self: flex-end;
+    background: url(./images/contacts_message_sign.png) 50% 50%;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.form-control{
+    background-color: #f8f3b5 !important;
 }
