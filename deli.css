@@ -353,6 +353,39 @@ article.active {
 
 /* Products CSS */
 
+.products {
+    animation: slide-out-from-bottom 3s;
+    animation-fill-mode: forwards;
+}
+
+.products.active {
+    display: block !important;
+    animation: slide-in-from-bottom 3s;
+}
+
+#products-container {
+    max-width: 90%;
+    min-height: 60vh;
+    background: url(./images/prodcuts.png) 50% 50%;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+
+.card {
+    max-height: 13vh;
+    width: 48% !important;
+    background-color: rgb(248, 243, 181, 0.5) !important;
+}
+
+.card-img-top {
+    object-fit: contain;
+}
+
+.page-link {
+    background-color: rgb(248, 243, 181, 0.5) !important;
+    color: black !important;
+}
 
 /* About CSS */
 
