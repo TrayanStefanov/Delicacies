@@ -19,19 +19,32 @@ ul {
 
 @keyframes fade-in {
     0% {
-        transform: rotateX(-100deg);
+        transform: rotateX(-90deg);
         transform-origin: top;
         opacity: 0;
     }
 
-    50%{
+    50% {
         opacity: 1;
     }
 
     100% {
         transform: rotateX(0deg);
+    }
+}
+
+@keyframes fade-out {
+    0% {
+        transform: rotateX(0deg);
         transform-origin: top;
-        
+        opacity: 1;
+    }
+
+    50% {}
+
+    100% {
+        opacity: 0;
+        transform: rotateX(-90deg);
     }
 }
 
@@ -46,9 +59,17 @@ ul {
 
     100% {
         transform: rotate(35deg);
-        transform-origin: bottom-left;
+    }
+}
+
+@keyframes slide-out-tilt {
+    0% {
+        transform: rotate(35deg) translateX(0);
     }
 
+    100% {
+        transform: rotate(0deg) translateX(-100%);
+    }
 }
 
 @keyframes slide-in-from-right {
@@ -63,11 +84,47 @@ ul {
     }
 }
 
+@keyframes slide-out-from-right {
+    0% {
+        transform: translateX(2%);
+        opacity: 1;
+    }
+
+    100% {
+        transform: translateX(102%);
+    }
+}
+
+
+@keyframes slide-in-from-bottom {
+    0% {
+        transform: translateY(1000px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slide-out-from-bottom {
+    0% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+
+    100% {
+        transform: translateY(1000px);
+        opacity: 0;
+    }
+}
+
 /* needs smoothingout */
 
 @keyframes lower {
     0% {
-        transform: translateY(-100%);
+        transform: translateY(-120%);
     }
 
     100% {
@@ -113,6 +170,16 @@ ul {
     } */
 }
 
+@keyframes raise {
+    0% {
+        transform: translateY(-20%);
+    }
+
+    100% {
+        transform: translateY(-120%);
+    }
+}
+
 
 @keyframes sway {
 
@@ -130,10 +197,6 @@ ul {
 }
 
 /* Intro CSS */
-
-#intro-container {
-    justify-self: center;
-}
 
 #welcomeSign {
     min-height: 34vh;
@@ -181,14 +244,14 @@ li:hover {
     overflow: hidden;
 }
 
-article {
+/* article {
     display: none;
 }
 
 article.active {
     display: block;
     animation: fade 0.5s ease backwards;
-}
+} */
 
 #content-container {
     height: 100%;
@@ -199,6 +262,11 @@ article.active {
 
 .landing {
     font-family: cursive;
+}
+
+.landing.active {
+    display: block !important;
+    animation: fade 0.5s ease backwards;
 }
 
 #landing-container {
@@ -251,13 +319,22 @@ article.active {
 
 /* Full product info CSS */
 
+.full-product.active {
+    animation: fade-in 4s;
+}
+
+.full-product {
+    display: flex !important;
+    animation: fade-out 4s;
+    animation-fill-mode: forwards;
+}
+
 #full-product-container {
     max-width: 76%;
     min-height: 60vh;
     background: url(./images/delicacy-full.png) 50% 50%;
     background-size: contain;
     background-repeat: no-repeat;
-    animation: fade-in 4s;
 }
 
 #file-info-head,
@@ -276,15 +353,25 @@ article.active {
 
 /* Products CSS */
 
+
 /* About CSS */
+
+.about {
+    animation: raise 5s;
+    animation-fill-mode: forwards;
+}
+
+.about.active {
+    display: block !important;
+    animation: lower 5s;
+    animation-fill-mode: forwards;
+}
 
 #about-container {
     min-height: 80vh;
     background: url(./images/about-sign-chain.png) 50% 50%;
     background-size: contain;
     background-repeat: no-repeat;
-    animation: lower 5s;
-    animation-fill-mode: forwards;
 }
 
 #about-text {
@@ -293,7 +380,12 @@ article.active {
 
 /* Contacts us CSS */
 
-#contacts-sign-container {
+.contacts.active {
+    /* display: block !important; */
+}
+
+.contacts>#contacts-sign-container {
+    display: block !important;
     position: relative;
     min-height: 50vh;
     min-width: 30%;
@@ -302,6 +394,11 @@ article.active {
     background: url(./images/contacts_sign.png) 50% 50%;
     background-size: contain;
     background-repeat: no-repeat;
+    animation: slide-out-tilt 3s;
+    animation-fill-mode: forwards;
+}
+
+.contacts.active>#contacts-sign-container {
     animation: slide-in-tilt 3s;
     animation-fill-mode: forwards;
 }
@@ -314,12 +411,18 @@ article.active {
     transform: rotate(8deg);
 }
 
-#contacts-message-container {
+.contacts>#contacts-message-container {
+    display: block !important;
     max-width: 60%;
     place-self: flex-end;
     background: url(./images/contacts_message_sign.png) 50% 50%;
     background-size: contain;
     background-repeat: no-repeat;
+    animation: slide-out-from-right 2s;
+    animation-fill-mode: forwards;
+}
+
+.contacts.active>#contacts-message-container {
     animation: slide-in-from-right 2s;
     animation-fill-mode: forwards;
 }
