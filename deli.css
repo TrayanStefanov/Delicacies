@@ -319,12 +319,12 @@ article.active {
 
 /* Full product info CSS */
 
-.full-product.active {
+.full-product {
+    display: flex !important;
     animation: fade-in 4s;
 }
 
-.full-product {
-    display: flex !important;
+.full-product.active {
     animation: fade-out 4s;
     animation-fill-mode: forwards;
 }
@@ -354,13 +354,13 @@ article.active {
 /* Products CSS */
 
 .products {
-    animation: slide-out-from-bottom 3s;
-    animation-fill-mode: forwards;
+    animation: slide-in-from-bottom 3s;
+    display: block !important;
 }
 
 .products.active {
-    display: block !important;
-    animation: slide-in-from-bottom 3s;
+    animation: slide-out-from-bottom 3s;
+    animation-fill-mode: forwards;
 }
 
 #products-container {
@@ -390,13 +390,13 @@ article.active {
 /* About CSS */
 
 .about {
-    animation: raise 5s;
+    display: block !important;
+    animation: lower 5s;
     animation-fill-mode: forwards;
 }
 
 .about.active {
-    display: block !important;
-    animation: lower 5s;
+    animation: raise 5s;
     animation-fill-mode: forwards;
 }
 
@@ -414,7 +414,7 @@ article.active {
 /* Contacts us CSS */
 
 .contacts.active {
-    /* display: block !important; */
+    display: block !important; 
 }
 
 .contacts>#contacts-sign-container {
@@ -427,12 +427,12 @@ article.active {
     background: url(./images/contacts_sign.png) 50% 50%;
     background-size: contain;
     background-repeat: no-repeat;
-    animation: slide-out-tilt 3s;
+    animation: slide-in-tilt 3s;
     animation-fill-mode: forwards;
 }
 
 .contacts.active>#contacts-sign-container {
-    animation: slide-in-tilt 3s;
+    animation: slide-out-tilt 3s;
     animation-fill-mode: forwards;
 }
 
@@ -451,12 +451,12 @@ article.active {
     background: url(./images/contacts_message_sign.png) 50% 50%;
     background-size: contain;
     background-repeat: no-repeat;
-    animation: slide-out-from-right 2s;
+    animation: slide-in-from-right 2s;
     animation-fill-mode: forwards;
 }
 
 .contacts.active>#contacts-message-container {
-    animation: slide-in-from-right 2s;
+    animation: slide-out-from-right 2s;
     animation-fill-mode: forwards;
 }
 
