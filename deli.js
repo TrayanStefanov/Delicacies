@@ -73,7 +73,25 @@ paginationLinks.forEach(link => {
     });
 });
 
+/* Pagination state update */
 
+function updatePaginationUI() {
+    paginationLinks.forEach(link => {
+        const text = link.textContent.trim();
+        const parent = link.closest(".page-item");
+
+        // Reset state
+        parent.classList.remove("active", "disabled");
+
+        if (text === "Назад") {
+            if (currentPage === 1) parent.classList.add("disabled");
+        } else if (text === "Напред") {
+            if (currentPage === totalPages) parent.classList.add("disabled");
+        } else if (parseInt(text) === currentPage) {
+            parent.classList.add("active");
+        }
+    });
+}
 
 
 /* let products = [{
