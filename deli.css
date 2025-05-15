@@ -376,9 +376,19 @@ article.active {
     background-repeat: no-repeat;
 }
 
+.close-btn>.fa-circle-xmark {
+    line-height: normal !important;
+}
+
+.close-btn {
+    border: none;
+    margin-top: 4rem;
+}
+
 #file-info-head,
 #file-info-middle,
-#file-info-bottom {
+#file-info-bottom,
+.close-btn {
     background-color: rgb(245, 245, 220, 0.5);
 }
 
@@ -417,7 +427,7 @@ article.active {
     background-color: rgb(248, 243, 181, 0.5) !important;
 }
 
-.img-wrapp{
+.img-wrapp {
     max-height: 11vh;
     overflow: hidden;
 }
@@ -431,7 +441,7 @@ article.active {
     color: black !important;
 }
 
-.disabled > .page-link{
+.disabled>.page-link {
     color: rgba(0, 0, 0, 0.5) !important;
 }
 
