@@ -431,6 +431,10 @@ article.active {
     color: black !important;
 }
 
+.disabled > .page-link{
+    color: rgba(0, 0, 0, 0.5) !important;
+}
+
 /* About CSS */
 
 .about {
