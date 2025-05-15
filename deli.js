@@ -21,11 +21,60 @@ backToTop.addEventListener("click", () => {
     document.documentElement.scrollTop = 0;
 });
 
-/* Navigation */
 
-/* Sign home? */
 
 /* Products pages */
+
+const productPages = document.querySelectorAll("[data-product-page]");
+const paginationLinks = document.querySelectorAll("[data-pagination-link]");
+const productsArticle = document.querySelector('[data-page="products"]');
+const pages = document.querySelectorAll("[data-page]");
+
+let currentPage = 1;
+const totalPages = productPages.length;
+
+paginationLinks.forEach(link => {
+    link.addEventListener("click", function () {
+        const text = this.textContent.trim();
+
+        // Determine new page
+        let newPage;
+        if (text === "Назад") {
+            newPage = currentPage > 1 ? currentPage - 1 : 1;
+        } else if (text === "Напред") {
+            newPage = currentPage < totalPages ? currentPage + 1 : totalPages;
+        } else {
+            newPage = parseInt(text);
+        }
+
+        // If page hasn't changed, do nothing
+        if (newPage === currentPage || isNaN(newPage)) return;
+
+        const paginationAnimation = () => {
+            // Hide current product page
+            const currentProductPage = document.querySelector(`[data-product-page="${currentPage}"]`);
+            if (currentProductPage) currentProductPage.classList.add("d-none");
+
+            // Show new product page
+            const newProductPage = document.querySelector(`[data-product-page="${newPage}"]`);
+            if (newProductPage) newProductPage.classList.remove("d-none");
+
+            // Reset animation state
+            productsArticle.classList.remove("active");
+            productsArticle.removeEventListener("animationend", paginationAnimation);
+
+            currentPage = newPage;
+            updatePaginationUI();
+        };
+
+        // Trigger animation
+        productsArticle.addEventListener("animationend", paginationAnimation);
+        productsArticle.classList.add("active");
+    });
+});
+
+
+
 
 /* let products = [{
     "imageSRC": "./images/file1_f.jpg",
@@ -43,10 +92,12 @@ backToTop.addEventListener("click", () => {
 }
 ] */
 
+/* Navigation */
+
+/* Sign home? */
 
 const navLinks = document.querySelectorAll("[data-nav-link]");
-const pages = document.querySelectorAll("[data-page]");
-const homePageLink = Array.from(navLinks).find(p => p.dataset = "landing");
+const homePageLink = Array.from(navLinks).find(link => link.dataset = "landing");
 
 window.onload = function () {
     navLinks.forEach(link => {
@@ -79,9 +130,6 @@ window.onload = function () {
         });
     });
 }
-
-
-
 
 /* Form submission */
 
@@ -119,6 +167,4 @@ form.addEventListener("submit", function (e) {
     }, function (error) {
         alert("Failed sending message. Please try again in a bit.")
     });
-
-
 })
