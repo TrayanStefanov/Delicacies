@@ -7,6 +7,30 @@ ul {
 
 /* Animations */
 
+
+@keyframes fade-in {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes fade-out {
+    0% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+
+/* Product info */
+
 /* @keyframes spin-and-enlarge {
     0% {
         transform: rotateZ(360deg) scale(1) translate(0%, 0%);
@@ -17,7 +41,7 @@ ul {
     }
 } */
 
-@keyframes fade-in {
+@keyframes flip-in {
     0% {
         transform: rotateX(-90deg);
         transform-origin: top;
@@ -33,7 +57,7 @@ ul {
     }
 }
 
-@keyframes fade-out {
+@keyframes flip-out {
     0% {
         transform: rotateX(0deg);
         transform-origin: top;
@@ -47,6 +71,8 @@ ul {
         transform: rotateX(-90deg);
     }
 }
+
+/* Contacts sign */
 
 @keyframes slide-in-tilt {
     from {
@@ -72,6 +98,8 @@ ul {
     }
 }
 
+/* Contacts message */
+
 @keyframes slide-in-from-right {
     0% {
         transform: translateX(100%);
@@ -95,6 +123,7 @@ ul {
     }
 }
 
+/* Product list */
 
 @keyframes slide-in-from-bottom {
     0% {
@@ -120,6 +149,7 @@ ul {
     }
 }
 
+/* About */
 /* needs smoothingout */
 
 @keyframes lower {
@@ -180,6 +210,7 @@ ul {
     }
 }
 
+/* Welcome sign / Navbar */
 
 @keyframes sway {
 
@@ -225,10 +256,16 @@ ul {
     animation: sway 10s infinite;
     animation-timing-function: ease-in-out;
     transform-origin: top;
+    box-shadow: none !important;
 }
 
-.nav-link:hover {
+.nav-link {
     cursor: pointer;
+}
+
+.nav-link.active {
+    pointer-events: none;
+    cursor: default;
 }
 
 li:hover {
@@ -262,11 +299,13 @@ article.active {
 
 .landing {
     font-family: cursive;
+    animation: fade-in 2s;
+    animation-fill-mode: forwards;
 }
 
 .landing.active {
-    display: block !important;
-    animation: fade 0.5s ease backwards;
+    animation: fade-out 1s;
+    animation-fill-mode: forwards;
 }
 
 #landing-container {
@@ -321,11 +360,11 @@ article.active {
 
 .full-product {
     display: flex !important;
-    animation: fade-in 4s;
+    animation: flip-in 2s;
 }
 
 .full-product.active {
-    animation: fade-out 4s;
+    animation: flip-out 1s;
     animation-fill-mode: forwards;
 }
 
@@ -378,6 +417,11 @@ article.active {
     background-color: rgb(248, 243, 181, 0.5) !important;
 }
 
+.img-wrapp{
+    max-height: 11vh;
+    overflow: hidden;
+}
+
 .card-img-top {
     object-fit: contain;
 }
@@ -413,9 +457,7 @@ article.active {
 
 /* Contacts us CSS */
 
-.contacts.active {
-    display: block !important; 
-}
+.contacts.active {}
 
 .contacts>#contacts-sign-container {
     display: block !important;
@@ -427,12 +469,12 @@ article.active {
     background: url(./images/contacts_sign.png) 50% 50%;
     background-size: contain;
     background-repeat: no-repeat;
-    animation: slide-in-tilt 3s;
+    animation: slide-in-tilt 2s;
     animation-fill-mode: forwards;
 }
 
 .contacts.active>#contacts-sign-container {
-    animation: slide-out-tilt 3s;
+    animation: slide-out-tilt 1s;
     animation-fill-mode: forwards;
 }
 
@@ -456,7 +498,7 @@ article.active {
 }
 
 .contacts.active>#contacts-message-container {
-    animation: slide-out-from-right 2s;
+    animation: slide-out-from-right 1s;
     animation-fill-mode: forwards;
 }
 
