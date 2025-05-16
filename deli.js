@@ -5,6 +5,7 @@ window.onscroll = function () {
 };
 
 let backToTop = document.getElementById("btn-back-to-top");
+backToTop.style.display = "none";
 
 /* Checks if we have scrolled */
 
@@ -22,6 +23,44 @@ backToTop.addEventListener("click", () => {
 });
 
 
+/* Navigation */
+
+/* Sign home? */
+
+const navLinks = document.querySelectorAll("[data-nav-link]");
+const homePageLink = Array.from(navLinks).find(link => link.dataset = "landing");
+
+window.onload = function () {
+    navLinks.forEach(link => {
+        link.addEventListener("click", function () {
+            const target = this.dataset.navLink;
+
+            const currentPage = Array.from(pages).find(p => !p.classList.contains("d-none"));
+            /* const currentLink = Array.from(navLinks).find(l => l.classList.contains("active")); */
+
+            if (currentPage && currentPage.dataset.page === target) return;
+
+            navLinks.forEach(link => link.classList.remove("active"));
+            this.classList.add("active");
+
+            // Add animationend handler once
+            const handleAnimationEnd = () => {
+                currentPage.classList.add("d-none");
+                currentPage.classList.remove("active");
+                currentPage.removeEventListener("animationend", handleAnimationEnd);
+
+                const newPage = Array.from(pages).find(p => p.dataset.page === target);
+                if (newPage) {
+                    newPage.classList.remove("d-none");
+                    scrollTo(0, 0);
+                }
+            };
+
+            currentPage.addEventListener("animationend", handleAnimationEnd);
+            currentPage.classList.add("active"); // Trigger animation
+        });
+    });
+}
 
 /* Products pages */
 
@@ -93,6 +132,68 @@ function updatePaginationUI() {
     });
 }
 
+/* Full product info */
+
+const productCards = document.querySelectorAll(".products .card");
+const fullProduct = document.querySelector(".full-product");
+
+// Select full product content areas
+const fullProductImage = fullProduct.querySelector("img");
+const fullProductTitle = fullProduct.querySelector("h1");
+const fullProductDescription = fullProduct.querySelector("#file-info-head p.fs-5");
+const fullProductIngredients = fullProduct.querySelector("#file-info-head p.fs-6");
+const fullProductPrice = fullProduct.querySelector("#file-info-bottom div:nth-child(1) div:last-child");
+
+productCards.forEach(card => {
+    card.addEventListener("click", () => {
+        const imgSrc = card.querySelector("img").getAttribute("src");
+        const title = card.querySelector(".card-title").textContent;
+        const description = card.querySelectorAll("p")[0].textContent;
+        const ingredients = card.querySelectorAll("p")[1].textContent;
+        const price = card.querySelector(".d-flex div:last-child").textContent;
+
+        // Fill full-product section
+        fullProductImage.setAttribute("src", imgSrc);
+        fullProductTitle.textContent = title;
+        fullProductDescription.textContent = description;
+        fullProductIngredients.textContent = ingredients;
+        fullProductPrice.textContent = price;
+
+        // Show full product, hide product page
+        const productsArticleAnimation = () => {
+            // Reset animation state
+            productsArticle.classList.add("d-none");
+            productsArticle.classList.remove("active");
+            productsArticle.removeEventListener("animationend", productsArticleAnimation);
+            fullProduct.classList.remove("d-none");
+        };
+        productsArticle.addEventListener("animationend", productsArticleAnimation);
+        productsArticle.classList.add("active");
+        scrollTo({ top: 0, behavior: "smooth" });
+    });
+});
+
+
+
+const closeBtn = document.querySelector(".full-product .close-btn");
+
+if (closeBtn) {
+    closeBtn.addEventListener("click", () => {
+        // Optionally trigger hide animation
+        const handleClose = () => {
+            fullProduct.classList.add("d-none");
+            fullProduct.classList.remove("active");
+            fullProduct.removeEventListener("animationend", handleClose);
+
+            productsArticle.classList.remove("d-none");
+            scrollTo({ top: 0, behavior: "smooth" });
+        };
+
+        fullProduct.addEventListener("animationend", handleClose);
+        fullProduct.classList.add("active"); // triggers .active → fade-out animation
+    });
+}
+
 
 /* let products = [{
     "imageSRC": "./images/file1_f.jpg",
@@ -110,44 +211,7 @@ function updatePaginationUI() {
 }
 ] */
 
-/* Navigation */
 
-/* Sign home? */
-
-const navLinks = document.querySelectorAll("[data-nav-link]");
-const homePageLink = Array.from(navLinks).find(link => link.dataset = "landing");
-
-window.onload = function () {
-    navLinks.forEach(link => {
-        link.addEventListener("click", function () {
-            const target = this.dataset.navLink;
-
-            const currentPage = Array.from(pages).find(p => !p.classList.contains("d-none"));
-            /* const currentLink = Array.from(navLinks).find(l => l.classList.contains("active")); */
-
-            if (currentPage && currentPage.dataset.page === target) return;
-
-            navLinks.forEach(link => link.classList.remove("active"));
-            this.classList.add("active");
-
-            // Add animationend handler once
-            const handleAnimationEnd = () => {
-                currentPage.classList.add("d-none");
-                currentPage.classList.remove("active");
-                currentPage.removeEventListener("animationend", handleAnimationEnd);
-
-                const newPage = Array.from(pages).find(p => p.dataset.page === target);
-                if (newPage) {
-                    newPage.classList.remove("d-none");
-                    scrollTo(0, 0);
-                }
-            };
-
-            currentPage.addEventListener("animationend", handleAnimationEnd);
-            currentPage.classList.add("active"); // Trigger animation
-        });
-    });
-}
 
 /* Form submission */
 
